@@ -44,7 +44,7 @@ Install dependencies:
 Run locally:
 - npm run dev
 
-**Docker Setup**
+**Docker Setup:**
 
 Build Docker image:
 - docker build -t my-nextjs-app .

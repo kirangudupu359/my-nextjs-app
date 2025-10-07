@@ -1,4 +1,5 @@
-**My Next.js App Deployment with Docker & Kubernetes**
+Containerizing and Deploy a Next.js Apploication using Docker, GitHUb Actions and Minikube.
+
 Overview:
 This project demonstrates a complete DevOps workflow:
 - Building a Next.js application

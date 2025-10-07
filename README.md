@@ -1,4 +1,4 @@
-Containerizing and Deploy a Next.js Apploication using Docker, GitHUb Actions and Minikube.
+**Containerizing and Deploy a Next.js Apploication using Docker, GitHUb Actions and Minikube:**
 
 Overview:
 This project demonstrates a complete DevOps workflow:
@@ -78,7 +78,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.MY_TOKEN }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5

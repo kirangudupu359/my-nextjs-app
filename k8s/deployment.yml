@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-nextjs-app
 spec:
-  replicas: 2  # Number of pods (container copies)
+  replicas: 2  
   selector:
     matchLabels:
       app: my-nextjs-app
@@ -15,6 +15,7 @@ spec:
       containers:
         - name: my-nextjs-app
           image: ghcr.io/kirangudupu359/my-nextjs-app:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
 

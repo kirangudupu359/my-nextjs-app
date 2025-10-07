@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nextjs-app
+spec:
+  replicas: 2  # Number of pods (container copies)
+  selector:
+    matchLabels:
+      app: my-nextjs-app
+  template:
+    metadata:
+      labels:
+        app: my-nextjs-app
+    spec:
+      containers:
+        - name: my-nextjs-app
+          image: ghcr.io/kirangudupu359/my-nextjs-app:latest
+          ports:
+            - containerPort: 3000
+

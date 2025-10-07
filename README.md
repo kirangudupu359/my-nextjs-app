@@ -19,20 +19,20 @@ This project demonstrates a complete DevOps workflow:
 - Troubleshooting
 - License
 
-**Features**
+**Features:**
 - Next.js app containerized for portability
 - Automated deployment via Git
 - Kubernetes manifests for scalable deployment
 - Step-by-step deployment and verification guide
 
-**Prerequisites**
+**Prerequisites:**
 - Node.js & npm
 - Docker
 - Git & GitHub account
 - Kubernetes cluster (Minikube, local, or cloud)
 - kubectl CLI
 
-**Getting Started**
+**Getting Started:**
 
 Clone the repo:
 - git clone https://github.com/kirangudupu359/my-nextjs-app.git
@@ -87,7 +87,7 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
 
-**How it Works**
+**How it Works:**
 
 - On every commit or PR to the main branch:
 - Checks out the code
@@ -96,26 +96,27 @@ jobs:
 - Can be extended to deploy to a Kubernetes cluster
 
 
-**GitHub Repository**
+**GitHub Repository:**
 
 Push all source, Dockerfile, and Kubernetes manifests to GitHub.
 Remote URL: https://github.com/kirangudupu359/my-nextjs-app.git
 
-**Kubernetes Deployment**
+**Kubernetes Deployment:**
 
 (Minikube)
-1. Start Minikube
+
+1. Start Minikube:
 minikube start
 
-2. Apply manifests
+2. Apply manifests:
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 
-3. Verify pods and services
+3. Verify pods and services:
 kubectl get pods
 kubectl get svc
 
-4. Access the app
+4. Access the app:
 
 Option A (recommended):
 
@@ -128,23 +129,23 @@ kubectl port-forward svc/my-nextjs-service 8080:80
 
 Access at http://localhost:8080
 
-Note: When running Minikube inside an AWS EC2 instance, external access requires additional networking setup (minikube tunnel, NGINX reverse proxy, or exposing NodePort via EC2 firewall). For this submission, the application is confirmed working inside Minikube.
+**Note:** When running Minikube inside an AWS EC2 instance, external access requires additional networking setup (minikube tunnel, NGINX reverse proxy, or exposing NodePort via EC2 firewall). For this submission, the application is confirmed working inside Minikube.
 
-**Deployment Notes for Reviewers**
+**Deployment Notes for Reviewers:**
 
 - Pods run successfully and serve the Next.js app on port 3000.
 - Kubernetes Service exposes the app via NodePort (30080).
 - Verified working with kubectl port-forward and minikube service.
 
 
-**Evaluation Focus Mapping**
+**Evaluation Focus Mapping:**
 
 - Docker optimization – lightweight image with proper port exposure
 - GitHub Actions – automated build & push to GHCR
 - Kubernetes manifests – deployment with replicas & health checks, service exposure
 - Documentation – clear local run, Minikube steps, and troubleshooting notes
 
-**Submission Details**
+**Submission Details:**
 
 - GitHub Repo: https://github.com/<your-username>/<your-repo>
 - GHCR Image URL: ghcr.io/<your-username>/my-nextjs-app:latest

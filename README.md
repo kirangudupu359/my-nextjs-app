@@ -19,6 +19,16 @@ This project demonstrates a complete DevOps workflow:
 - Troubleshooting
 - License
 
+**Project Structure:**
+.
+├── Dockerfile
+├── .github/workflows/ci-cd.yaml   # GitHub Actions workflow
+├── k8s/
+│   ├── deployment.yaml
+│   └── service.yaml
+└── README.md
+
+
 **Features:**
 - Next.js app containerized for portability
 - Automated deployment via Git

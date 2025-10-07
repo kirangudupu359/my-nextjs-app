@@ -22,7 +22,7 @@ This project demonstrates a complete DevOps workflow:
 **Project Structure:**
 .
 ├── Dockerfile
-├── .github/workflows/ci-cd.yaml   # GitHub Actions workflow
+├── .github/workflows/ci-cd.yaml  
 ├── k8s/
 │   ├── deployment.yaml
 │   └── service.yaml
